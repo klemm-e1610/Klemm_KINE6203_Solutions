@@ -241,10 +241,10 @@ numPositive = 0;
 sizeOriginalVec = size(originalVec);
 for n=1:sizeOriginalVec(2)
     if originalVec(n) > 0
-        numPositive = numPositive + 1;
+        numPositive = numPositive + 1
     end
 end
-numPositive
+
 
 % - get the absolute value of each element
 
@@ -301,7 +301,7 @@ ROI = (revenue - cost) / (cost * 100)
 basicTask = "Hello World"
 
 prompt = "Type what you want the screen to output: ";
-user_input = input(prompt, "s")
+user_input = input(prompt, "s");
 
 
 
