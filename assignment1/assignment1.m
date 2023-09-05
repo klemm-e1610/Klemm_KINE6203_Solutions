@@ -170,9 +170,8 @@ whos('ogWeightPounds','ogWeightOunces')
 % as casting in computer programming). Use whos to check your result. 
 
 decimalNumber = 2.2
-whos('decimalNumber')
 decimalNumber_int_32 = int32(decimalNumber)
-whos('decimalNumber_int_32')
+whos('decimalNumber','decimalNumber_int_32')
 
 
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
