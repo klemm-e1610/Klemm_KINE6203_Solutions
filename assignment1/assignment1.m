@@ -298,10 +298,12 @@ ROI = (revenue - cost) / (cost * 100)
 %%% Enter the code for your program below this line
 
 
-basicTask = "Hello World"
+%basicTask = "Hello World"
+fprintf("Hello World\n")
 
 prompt = "Type what you want the screen to output: ";
-user_input = input(prompt, "s")
+user_input = input(prompt, "s");
+fprintf(user_input)
 
 
 
