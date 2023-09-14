@@ -20,6 +20,11 @@ play_prompt = "Would you like to play a game? Type yes or no and press enter: ";
 user_play = input(play_prompt,'s'); % ask user if they want to play
 user_play = convertCharsToStrings(user_play); %make the user's input a string instead of characters
 
+if user_play ~= "yes" | user_play~="YES" | user_play~= "Yes" % if user did not enter "yes" - acknowledge user doesn't want to play
+    disp('Ok, no game for you. Come back soon and have a meh day.')
+else
+end
+
 numWins=0; %number of player wins
 numLosses=0; % number of player losses
 numTies=0; % number of player ties
@@ -55,6 +60,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                     % disp("Congrats! You win!") % if there are, display "Congrats! You win!"
                     % numWins=numWins+1; % if player won, increase number of wins by 1
                     break % break out of the while loop
+                else % if the player did not win, do nothing
                 end
 
                 computer_move_location = randi(9); % computer move is based off a random move generator from 1-9
@@ -65,6 +71,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1; %number of computer moves is increased by 1
                             disp(game_board) %show the game board
                            
+                        else % if the spot is already taken (so it does not contain "spot"), don't do anything)
                         end
                     case 2 %same thing but spot 2
                         if contains(game_board(1,2),"spot")
@@ -72,6 +79,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                         
+                        else
                         end
                     case 3
                         if contains(game_board(1,3),"spot")
@@ -79,6 +87,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                            
+                        else
                         end
                     case 4
                         if contains(game_board(2,1),"spot")
@@ -86,6 +95,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                           
+                        else
                         end
                     case 5
                         if contains(game_board(2,2),"spot")
@@ -93,6 +103,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                            
+                        else
                         end
                     case 6
                         if contains(game_board(2,3),"spot")
@@ -100,6 +111,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                           
+                        else
                         end
                     case 7
                         if contains(game_board(3,1),"spot")
@@ -107,6 +119,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                          
+                        else
                         end
                     case 8
                         if contains(game_board(3,2),"spot")
@@ -114,6 +127,7 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                          
+                        else
                         end
                     case 9
                         if contains(game_board(3,3),"spot")
@@ -121,13 +135,18 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                             computer_move = computer_move+1;
                             disp(game_board)
                             
+                        else
                         end
                 end
             end
 
             while player_move == computer_move %when the computer and player have moved an equal amount of times, the player will move again
                 if isequaln(game_board(1,1),game_board(1,2),game_board(1,3),"o") || isequaln(game_board(1,1),game_board(2,1),game_board(3,1),"o") || isequaln(game_board(1,1), game_board(2,2), game_board(3,3),"o") || isequaln(game_board(1,2), game_board(2,2), game_board(3,2), "o") || isequaln(game_board(1,3), game_board(2,3), game_board(3,3), "o") || isequaln(game_board(3,1), game_board(2,2), game_board(1,3), "o") || isequaln(game_board(2,1), game_board(2,2), game_board(2,3), "o") || isequaln(game_board(3,1), game_board(3,2), game_board(3,3), "o") 
+                    % above line checks if the computer has won 
+                    % disp("Uh oh. You lose :(") % if there are 3 o's in a row on the board, display "Uh oh. You lose :( "
+                    % numLosses=numLosses+1; % increase the number of player losses
                     break % break out of the player move while statement for player move if the computer has won
+                else % if the computer has not won, do nothing here
                 end
 
                 move_prompt = "What spot would you like to go in? Type the spot number and press enter: "; %statement asking player where they would like to move
