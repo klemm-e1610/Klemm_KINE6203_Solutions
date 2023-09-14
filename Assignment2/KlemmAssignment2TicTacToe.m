@@ -6,7 +6,7 @@
 % computer using primarily a for loop. The user is asked if they want to
 % play Tic Tac Toe. As long as they have said yes, they will continue to
 % play games against the computer. Moves are generated using a for loop for
-% move 1:10 based on there being 9 spots on the board, and a 10th loop is
+% moves 1:10 based on there being 9 spots on the board, and a 10th loop is
 % used to check for a tie game. The user plays first followed by the
 % computer's move. The number of player wins, losses, and ties is stored. 
 %
