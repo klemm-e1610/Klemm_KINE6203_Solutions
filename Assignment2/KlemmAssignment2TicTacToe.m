@@ -52,8 +52,6 @@ while user_play == "yes" | user_play == "Yes" | user_play == "YES" % as long as 
                 if isequaln(game_board(1,1),game_board(1,2),game_board(1,3),"x") || isequaln(game_board(1,1),game_board(2,1),game_board(3,1),"x") || isequaln(game_board(1,1), game_board(2,2), game_board(3,3),"x") || isequaln(game_board(1,2), game_board(2,2), game_board(3,2), "x") || isequaln(game_board(1,3), game_board(2,3), game_board(3,3), "x") || isequaln(game_board(3,1), game_board(2,2), game_board(1,3), "x") || isequaln(game_board(2,1), game_board(2,2), game_board(2,3), "x") || isequaln(game_board(3,1), game_board(3,2), game_board(3,3), "x")
                     % check if there are 3 x's in a row at any place on the
                     % board
-                    % disp("Congrats! You win!") % if there are, display "Congrats! You win!"
-                    % numWins=numWins+1; % if player won, increase number of wins by 1
                     break % break out of the while loop
                 end
 
