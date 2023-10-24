@@ -1,13 +1,13 @@
 function [dailyIncreaseIso] = dayComparer(subjectID,firstDay,secondDay)
 % This function determines if a subject increased their isokinetic strength
 % performance between two days. 
-
+%
 % The function takes three inputs - subjectID (a string) and the isokinetic
 % data from two days in chronological order (doubles). If it is determined
 % that the second day input is greater than the first day input, the
 % respective subjectID is added to the string array output
 % dailyIncreaseIso.
-
+%
 % Tested and developed using MATLAB 2023b
 % Tested and developed on Macbook Air M2
 %
