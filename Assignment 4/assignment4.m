@@ -34,9 +34,9 @@ for i=1:length(subjectID) % use a for loop to weight normalize each day's isokin
     day3IndMeans(i) = day3(i)/weight(i); % repeat for day 3
 end
 
-normDay1mean = mean(day1IndMeans); % calculate group mean for day 1 weight normalized isokinetic data
-normDay2mean = mean(day2IndMeans); % same for day 2
-normDay3mean = mean(day3IndMeans); % same for day 3
+normDay1mean = mean(day1IndMeans,"omitmissing"); % calculate group mean for day 1 weight normalized isokinetic data
+normDay2mean = mean(day2IndMeans,"omitmissing"); % same for day 2
+normDay3mean = mean(day3IndMeans,"omitmissing"); % same for day 3
 
 %% Export results
 
